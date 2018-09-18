@@ -31,6 +31,15 @@ If you have not already download the week 1 folder.
 We will go line by line to give a general understanding of our hello flask application.
 
 ```python
-s = "Python syntax highlighting"
-print s
+from flask import Flask
+app = Flask(__name__)
+```
+
+```python
+@app.route("/")
+```
+
+```python
+def hello():
+	return "Hello Flask"
 ```
