@@ -30,10 +30,15 @@ If you have not already download the week 1 folder.
 ## Understanding HelloWorld.py
 
 ### What is a server? How does it work?
-![Image of server]
-(https://ruslanspivak.com/lsbaws-part1/LSBAWS_HTTP_request_response.png)
+![Image of server](https://ruslanspivak.com/lsbaws-part1/LSBAWS_HTTP_request_response.png)
 
-We will go line by line to give a general understanding of our hello flask application.
+As the image shows, you send a request to a server to get a response from the server. The request is you pressing ENTER after typing in a URL, The server is located at that URL. The website you see is the response from the server. Now, we're making our own server with our own URL and our own responses. 
+
+### What is Flask?
+We encourage you to read more about Flask and its features(just google it!). But overall, Flask is just a framework. that lets us make a server ourselves. It'll be more clear in the next section.
+
+### Our app
+We will go line by line to give a general understanding of our hello flask application. 
 
 - First we import Flask and instantiate the flask app.
 ```python
@@ -44,8 +49,19 @@ app = Flask(__name__)
 ```python
 @app.route("/")
 ```
-- Then we define the function that returns the body of the web request, this can return HTML or some other encoding to pass information to a user or another program.
+
+What does this mean? It's just how github.com/RutgersMobileApplicationDevelopment shows you something different from github.com/mongo. The URL is *routed* differently based on what the text after the / looks like. So different URLs run different code and show different results. How does it do that? See below.
+
+- Then we define the function that returns the body of the web request, this can return HTML or some other encoding to pass information to a user or another program. Essentially, for this particular route, we are running the following function.
 ```python
 def hello():
 	return "Hello Flask"
 ```
+
+- Then we define another route.
+```python
+@app.route("/one")
+def func():
+	return 1
+```
+This is a new route. If you go to http://127.0.0.1:5000/one in your browser, you should now see 1. This is the basic way servers respond to different user needs: by defining multiple routes.
