@@ -30,15 +30,16 @@ If you have not already download the week 1 folder.
 ## Understanding HelloWorld.py
 We will go line by line to give a general understanding of our hello flask application.
 
+- First we import Flask and instanciate the flask app.
 ```python
 from flask import Flask
 app = Flask(__name__)
 ```
-
+- Then we tell the app that the following function will be responsible for returning the "/" route.
 ```python
 @app.route("/")
 ```
-
+- Then we define the function that returns the body of the web request, this can return HTML or some other encoding to pass information to a user or another program.
 ```python
 def hello():
 	return "Hello Flask"
