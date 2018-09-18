@@ -9,7 +9,9 @@ Flask Is a simple but powerful web microframework for **python**. Flask is easy 
 
  - ## Mac
 	 1. Install pip package manager so we can install the flask packages in your terminal run: ```bash sudo easy_install pip ``` 
-	 2. Install Flask using pip run:  ```bash pip install Flask ```
+	 2. Install Flask using pip run:  ```bash
+	 pip install Flask 
+	 ```
 	 3. You're all done Proceed to the "Hello Flask" section
 - ## Debian Linux Distros
 	1. Run in your terminal ```bash sudo apt-get install python-pip ```
@@ -30,4 +32,6 @@ If you have not already download the week 1 folder.
 ## Understanding HelloWorld.py
 We will go line by line to give a general understanding of our hello flask application.
 
- - ```python from flask import Flask```
+ - ```python
+ from flask import Flask
+ ```
