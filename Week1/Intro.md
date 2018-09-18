@@ -4,7 +4,7 @@ Flask Is a simple but powerful web microframework for **python**. Flask is easy 
 ## Setting Up Flask
 
  - ## Mac
-	 - Install pip package manager so we can install the flask packages:
- ``` sudo easy_install pip ```
+	 - Install pip package manager so we can install the flask packages in your terminal run: ``` sudo easy_install pip ```
  
-	 - Run the versio
+	 - Install Flask using pip run:  ``` pip install Flask ```
+	 - You're all done Proceed to the next section
