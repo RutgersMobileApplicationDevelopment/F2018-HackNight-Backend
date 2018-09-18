@@ -28,9 +28,14 @@ If you have not already download the week 1 folder.
 - In the next section we will take a deep dive into HelloWorld.py to help you understand how it works.
 
 ## Understanding HelloWorld.py
+
+### What is a server? How does it work?
+![Image of server]
+(https://ruslanspivak.com/lsbaws-part1/LSBAWS_HTTP_request_response.png)
+
 We will go line by line to give a general understanding of our hello flask application.
 
-- First we import Flask and instanciate the flask app.
+- First we import Flask and instantiate the flask app.
 ```python
 from flask import Flask
 app = Flask(__name__)
