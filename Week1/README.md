@@ -1,3 +1,4 @@
+
 # Hack Night 1: Intro To Flask
 
 Welcome to RUMAD Hack Nights! Tonight we are going to build a simple web backend API giving a quick introduction to flask.
@@ -65,3 +66,24 @@ def func():
 	return 1
 ```
 This is a new route. If you go to http://127.0.0.1:5000/one in your browser, you should now see 1. This is the basic way servers respond to different user needs: by defining multiple routes.
+
+## Simple User Input
+The simpilest way for your server to collect data from a user is a GET request. A get request is a method for passing data to the server by encoding the data into the URL by adding a followed by a parameter name like ```?bar=``` then the value we want to pass into the parameter: ```?bar=foo```. To test this out check out UserInput.py.
+
+Like Before run ``` FLASK_APP=UserInput.py flask run``` and go to the Uppercase route and pass something into the "word" parameter like so ```/Uppercase?word=python``` and see how the server responds.
+
+## Understanding UserInput.py
+Opening up UserInput.py you will find a very similar format to HelloWorld.py the parts of the code we are most concerned with are these 2 lines:
+```python
+from flask import request
+...
+word = request.args.get('word')
+```
+To handle get requests we must first import flask's request variable. Then in our route function we can access any get arguments through the ```request.args.get``` function like seen in the second line.
+
+## What Next?
+For the rest of the night or during the week you should create an api with 2 routes:
+ 1. /tax to calculate sales tax of a bill (use a fixed 7% sales tax)
+ 2. /tip to calculate calculate the tip for a bill where you can enter a tip percentage and a bill total
+ 
+ hint: You need to figure out how to convert the string inputs from ```get()``` to a number.
