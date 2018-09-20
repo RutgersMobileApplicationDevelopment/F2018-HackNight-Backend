@@ -72,6 +72,12 @@ The simpilest way for your server to collect data from a user is a GET request. 
 
 Like Before run ``` FLASK_APP=UserInput.py flask run``` and go to the Uppercase route and pass something into the "word" parameter like so ```/Uppercase?word=python``` and see how the server responds.
 
+To add multiple parameters you should use "&" after a parameter and write a new parameter like:
+```
+/example?Foo=Hello&Bar=World
+``` 
+Where we pass both of the parameters Foo and Bar
+
 ## Understanding UserInput.py
 Opening up UserInput.py you will find a very similar format to HelloWorld.py the parts of the code we are most concerned with are these 2 lines:
 ```python
