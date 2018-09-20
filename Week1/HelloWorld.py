@@ -5,6 +5,6 @@ app = Flask(__name__)
 def hello():
     return "Hello Flask"
 
-@app.route("/one)
+@app.route("/one")
 def func():
-    return 1
+    return "1"
