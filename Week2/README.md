@@ -45,5 +45,32 @@ Read this (https://www.tutorialspoint.com/http/http_methods.htm) description of 
 
 Note - you should never separate this kind of functionality(exercise 2) based on the method that was used. This is only for your understanding and practice!
 
+
 ### Sending complex data
-Up till
+Up till now, we have sent only small pieces of data in the URL using our parameters, like `/tax&amount=12` or something like that. Many times, we want to send large amounts of complex data that would just clutter our URL. 
+
+First, for those of you don't know about JSON, we need to go through that first. JSON is just a way of structuring data. Read this link(https://www.makeuseof.com/tag/json-laymans-overview/) and do more of your own research to get comfortable with JSON.
+
+Now, consider a case where you have to send more than just a few things in your request. Let's say you're trying to create an app to store user information and you have to send the username, their address (which has 4 parts: street, town, state, and zip), their phone number, their hobbies (which could be a long list), and much more. You clearly can't send all of those in the URL. 
+
+The way to do this is to use the **body** of the request. You can send a lot of complex data in the body of the request in a JSON format. 
+
+Make sure `methods.py` is running again, and in Postman, type in 127.0.0.1:5000/complex as youre URL and change the method to POST. Now, navigate to the tab labelled "Body". This is where you put data in the body. Click on the "raw" radio button. Paste the following into there:
+```
+{
+	"username": "sponegebob",
+    "age": 19,
+    "hobbies": ["swimming", "reading", "skiing"],
+    "address": {
+    	"street": "124 Conch Street",
+        "town": "Bikini Bottom",
+        "state": "NJ"
+        "zip": "08901"
+    }
+}
+```
+
+Click send. You should see some output. Yay! You just sent a POST request with some data.
+
+**Exercise:**
+
