@@ -64,7 +64,7 @@ Make sure `methods.py` is running again, and in Postman, type in 127.0.0.1:5000/
 	"address": {
  		"street": "124 Conch Street",
         	"town": "Bikini Bottom",
-        	"state": "NJ"
+        	"state": "NJ",
         	"zip": "08901"
     	}
 }
