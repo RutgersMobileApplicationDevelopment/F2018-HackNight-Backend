@@ -59,18 +59,28 @@ Make sure `methods.py` is running again, and in Postman, type in 127.0.0.1:5000/
 ```
 {
 	"username": "sponegebob",
-    "age": 19,
-    "hobbies": ["swimming", "reading", "skiing"],
-    "address": {
-    	"street": "124 Conch Street",
-        "town": "Bikini Bottom",
-        "state": "NJ"
-        "zip": "08901"
-    }
+	"age": 19,
+	"hobbies": ["swimming", "reading", "skiing"],
+	"address": {
+ 		"street": "124 Conch Street",
+        	"town": "Bikini Bottom",
+        	"state": "NJ"
+        	"zip": "08901"
+    	}
 }
 ```
 
 Click send. You should see some output. Yay! You just sent a POST request with some data.
 
 **Exercise:**
-
+Write a route that listens to POST requests and takes the following parameters:
+```
+{
+	"name": <user's name>,
+	"waiter": <name of the waiter>,
+	"tip": <percent tip that they want to give>,
+	"total": <total amount on receipt>,
+	"items": [ an array of items that were ordered ]
+}
+and it returns a string saying "<user's name> ordered <each>, <item>, <in>, <the>, <list> from <waiter> and is paying <total with tip included>. "
+```
