@@ -70,7 +70,7 @@ Make sure `methods.py` is running again, and in Postman, type in 127.0.0.1:5000/
 }
 ```
 
-Click send. You should see some output. Yay! You just sent a POST request with some data.
+Then, to the right next to "form-data x-www-form-urlencoded raw binary", click on the dropdown that right now says "Text" and click "JSON(application/json)". Click send. You should see some output. Yay! You just sent a POST request with some data.
 
 **Exercise:**
 Write a route that listens to POST requests and takes the following parameters:
