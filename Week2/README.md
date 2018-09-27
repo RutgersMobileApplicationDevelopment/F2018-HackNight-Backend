@@ -7,7 +7,7 @@
 
 
 ### Postman
-1) https://www.getpostman.com/. Open it up. 
+1) https://www.getpostman.com/. Download it and open it up. 
 2) Run the `methods.py` flask app we have given, like we did last week.
 3) Go to Postman. In the URL field, put in 127.0.0.1:5000/hello.
 4) To the left of the URL, make sure it says "GET", otherwise click on the dropdown and select "GET". 
